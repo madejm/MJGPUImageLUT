@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7B0137D523A9A32D00BF80D6 /* MJGPUImageLUT.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B0137D323A9A32D00BF80D6 /* MJGPUImageLUT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B0137DE23A9A5DB00BF80D6 /* MJGPUImageCocoaLUTFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0137DD23A9A5DB00BF80D6 /* MJGPUImageCocoaLUTFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7B0137D023A9A32D00BF80D6 /* MJGPUImageLUT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MJGPUImageLUT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0137D323A9A32D00BF80D6 /* MJGPUImageLUT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJGPUImageLUT.h; sourceTree = "<group>"; };
 		7B0137D423A9A32D00BF80D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B0137DD23A9A5DB00BF80D6 /* MJGPUImageCocoaLUTFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MJGPUImageCocoaLUTFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				7B0137D323A9A32D00BF80D6 /* MJGPUImageLUT.h */,
+				7B0137DD23A9A5DB00BF80D6 /* MJGPUImageCocoaLUTFilter.swift */,
 				7B0137D423A9A32D00BF80D6 /* Info.plist */,
 			);
 			path = MJGPUImageLUT;
@@ -95,6 +98,7 @@
 				TargetAttributes = {
 					7B0137CF23A9A32D00BF80D6 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -131,6 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B0137DE23A9A5DB00BF80D6 /* MJGPUImageCocoaLUTFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +265,7 @@
 		7B0137D923A9A32D00BF80D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QBJR4H3T2D;
@@ -276,6 +282,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mejdej.MJGPUImageLUT;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +291,7 @@
 		7B0137DA23A9A32D00BF80D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QBJR4H3T2D;
