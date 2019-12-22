@@ -1,5 +1,5 @@
 //
-//  MJGPUImageCocoaLUTFilter.swift
+//  MJGPUImageLUTFilter.swift
 //  MJGPUImageLUT
 //
 //  Created by Mateusz Madej on 18/12/2019.
@@ -10,11 +10,11 @@ import GPUImage
 import CocoaLUT
 import MJImageLUT
 
-public class MJGPUImageCocoaLUTFilter: GPUImageFilterGroup {
+public class MJGPUImageLUTFilter: GPUImageFilterGroup {
 
-    let lookupImageSource: GPUImagePicture
+    private let lookupImageSource: GPUImagePicture
     
-    public init(lut: LUT) {
+    public convenience init(lut: LUT) {
         
         var lutImage: UIImage? = nil
         
@@ -22,7 +22,11 @@ public class MJGPUImageCocoaLUTFilter: GPUImageFilterGroup {
         if let image = UIImage(named: "lookup.png", in: bundle, compatibleWith: nil) {
             lutImage = lut.apply(toImage: image)
         }
-        lookupImageSource = GPUImagePicture(image: lutImage)
+        self.init(lookupImage: lutImage)
+    }
+    
+    public init(lookupImage: UIImage?) {        
+        lookupImageSource = GPUImagePicture(image: lookupImage)
         
         super.init()
         
